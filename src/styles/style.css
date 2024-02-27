@@ -8,18 +8,20 @@
 :root {
   --primaryClr: ;
   --secondaryClr: ;
-  --textClr: ;
+  --textClr: #fff;
   --btnClr: ;
   --btnHoverClr: ;
 }
 
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
-  background: rgb(73,35,133);
-background: radial-gradient(circle, rgba(73,35,133,1) 0%, rgba(139,46,190,1) 50%, rgba(66,47,105,1) 100%);
+  background: rgb(20, 2, 30);
+  background: radial-gradient(circle, rgba(20, 2, 30) 0%, rgb(37, 23, 64) 75%);
+  color: var(--textClr);
 }
 
 ul,
@@ -34,4 +36,28 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7em;
+  gap: 4em;
+}
+
+main > img {
+  width: 850px;
+}
+
+@media (min-width: 680px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
 }
